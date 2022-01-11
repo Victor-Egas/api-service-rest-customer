@@ -1,6 +1,7 @@
 package com.cuenta.corriente.service.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.cuenta.corriente.model.CuentaCorriente;
 import com.cuenta.corriente.repository.CuentaCorrienteRepository;
@@ -10,6 +11,7 @@ import com.cuenta.corriente.service.ICuentaCorrienteService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@Service
 public class CuentaCorrienteService implements ICuentaCorrienteService {
 
 	@Autowired
