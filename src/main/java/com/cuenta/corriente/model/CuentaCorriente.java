@@ -18,6 +18,20 @@ public class CuentaCorriente {
 	
 	private Customer customer;
 
+	 
+	
+	public CuentaCorriente( String status, String type, Customer customer) {
+		
+		this.status = status;
+		this.type = type;
+		this.customer = customer;
+	}
+
+	@Override
+	public String toString() {
+		return "CuentaCorriente [id=" + id + ", status=" + status + ", type=" + type + ", customer=" + customer + "]";
+	}
+
 	public String getId() {
 		return id;
 	}
