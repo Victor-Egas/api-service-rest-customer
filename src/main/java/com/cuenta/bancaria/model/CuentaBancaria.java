@@ -1,11 +1,20 @@
-package com.cuenta.corriente.model;
+package com.cuenta.bancaria.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection="cuentaCorriente")
-public class CuentaCorriente {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Slf4j
+@Document(collection="cuentaBancaria")
+public class CuentaBancaria {
 
 	@Id
 	private String id;
@@ -16,11 +25,14 @@ public class CuentaCorriente {
 	@Field(name="type")
 	private String type;
 	
+	@Field(name="amount")
+	private double amount;
+	
 	private Customer customer;
 
 	 
 	
-	public CuentaCorriente( String status, String type, Customer customer) {
+	public CuentaBancaria( String status, String type, Customer customer) {
 		
 		this.status = status;
 		this.type = type;
@@ -56,6 +68,10 @@ public class CuentaCorriente {
 		this.type = type;
 	}
 
+	public double getAmount() {
+		return amount;
+	}
+	
 	public Customer getCustomer() {
 		return customer;
 	}

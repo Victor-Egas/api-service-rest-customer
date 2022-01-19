@@ -1,4 +1,4 @@
-package com.cuenta.corriente;
+package com.cuenta.bancaria;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
