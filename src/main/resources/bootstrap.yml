@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: service-cuenta-bancaria
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8888
